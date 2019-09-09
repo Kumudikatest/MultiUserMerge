@@ -42,7 +42,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "MultiUserMerge/hiruadded.js",
-        "code": "//this is a test file"
+        "code": "//this is a test file edit"
       }
     },
     "deletedFiles": [],
@@ -98,7 +98,7 @@
     "projectRegion": "eu-west-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568007652362
+    "lastSave": 1568008283350
   },
   "VCS_STATE": {
     "provider": "GitHub",

@@ -30,7 +30,21 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": []
+        "triggers": [
+          {
+            "resourceName": "apigeuWest1IrelandAPI1testpost",
+            "config": {}
+          }
+        ],
+        "testCases": {
+          "6591e059-41ab-4ac8-b8dd-ec91914d694b": {
+            "id": "6591e059-41ab-4ac8-b8dd-ec91914d694b",
+            "name": "Test event",
+            "functionId": "21f85e58-72be-4c3b-b126-ed9d5402ae21",
+            "event": "{\r\n    \"body\": \"eyJ0ZXN0IjoiYm9keSJ9\",\r\n    \"resource\": \"/{proxy+}\",\r\n    \"path\": \"/path/to/resource\",\r\n    \"httpMethod\": \"POST\",\r\n    \"isBase64Encoded\": true,\r\n    \"queryStringParameters\": {\r\n        \"foo\": \"bar\"\r\n    },\r\n    \"pathParameters\": {\r\n        \"proxy\": \"/path/to/resource\"\r\n    },\r\n    \"stageVariables\": {\r\n        \"baz\": \"qux\"\r\n    },\r\n    \"headers\": {\r\n        \"Accept\": \"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\",\r\n        \"Accept-Encoding\": \"gzip, deflate, sdch\",\r\n        \"Accept-Language\": \"en-US,en;q=0.8\",\r\n        \"Cache-Control\": \"max-age=0\",\r\n        \"CloudFront-Forwarded-Proto\": \"https\",\r\n        \"CloudFront-Is-Desktop-Viewer\": \"true\",\r\n        \"CloudFront-Is-Mobile-Viewer\": \"false\",\r\n        \"CloudFront-Is-SmartTV-Viewer\": \"false\",\r\n        \"CloudFront-Is-Tablet-Viewer\": \"false\",\r\n        \"CloudFront-Viewer-Country\": \"US\",\r\n        \"Host\": \"1234567890.execute-api.us-east-1.amazonaws.com\",\r\n        \"Upgrade-Insecure-Requests\": \"1\",\r\n        \"User-Agent\": \"Custom User Agent String\",\r\n        \"Via\": \"1.1 08f323deadbeefa7af34d5feb414ce27.cloudfront.net (CloudFront)\",\r\n        \"X-Amz-Cf-Id\": \"cDehVQoZnx43VYQb9j2-nvCh-9z396Uhbp027Y2JvkCPNLmGJHqlaA==\",\r\n        \"X-Forwarded-For\": \"127.0.0.1, 127.0.0.2\",\r\n        \"X-Forwarded-Port\": \"443\",\r\n        \"X-Forwarded-Proto\": \"https\"\r\n    },\r\n    \"requestContext\": {\r\n        \"accountId\": \"123456789012\",\r\n        \"resourceId\": \"123456\",\r\n        \"stage\": \"prod\",\r\n        \"requestId\": \"c6af9ac6-7b61-11e6-9a41-93e8deadbeef\",\r\n        \"requestTime\": \"09/Apr/2015:12:34:56 +0000\",\r\n        \"requestTimeEpoch\": 1428582896000,\r\n        \"identity\": {\r\n            \"cognitoIdentityPoolId\": null,\r\n            \"accountId\": null,\r\n            \"cognitoIdentityId\": null,\r\n            \"caller\": null,\r\n            \"accessKey\": null,\r\n            \"sourceIp\": \"127.0.0.1\",\r\n            \"cognitoAuthenticationType\": null,\r\n            \"cognitoAuthenticationProvider\": null,\r\n            \"userArn\": null,\r\n            \"userAgent\": \"Custom User Agent String\",\r\n            \"user\": null\r\n        },\r\n        \"path\": \"/prod/path/to/resource\",\r\n        \"resourcePath\": \"/{proxy+}\",\r\n        \"httpMethod\": \"POST\",\r\n        \"apiId\": \"1234567890\",\r\n        \"protocol\": \"HTTP/1.1\"\r\n    }\r\n}",
+            "eventTemplate": "apigateway-aws-proxy"
+          }
+        }
       }
     },
     "deletedFiles": [],
@@ -39,7 +53,27 @@
       "21f85e58-72be-4c3b-b126-ed9d5402ae21"
     ],
     "currentFileId": "21f85e58-72be-4c3b-b126-ed9d5402ae21",
-    "resources": {},
+    "resources": {
+      "apigeuWest1IrelandAPI1testpost": {
+        "name": "apigeuWest1IrelandAPI1testpost",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "eu-west-1",
+          "apiMode": 0,
+          "apiName": "IrelandAPI1",
+          "endpointType": "EDGE",
+          "resourceMode": 0,
+          "resourceName": "test",
+          "resourcePath": "/test",
+          "restMethod": "POST",
+          "proxyIntegration": true,
+          "enableCORS": true,
+          "stageMode": 0,
+          "stageName": "Test",
+          "mode": 0
+        }
+      }
+    },
     "customTemplate": {
       "dialect": null,
       "definitions": null
@@ -65,7 +99,7 @@
     "projectRegion": "eu-west-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568006987775
+    "lastSave": 1568007285321
   },
   "VCS_STATE": {
     "provider": "GitHub",

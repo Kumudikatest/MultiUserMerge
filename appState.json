@@ -1,0 +1,77 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "d3341dbb-5e3c-4b38-ac4c-45cac753f8be": {
+        "id": "d3341dbb-5e3c-4b38-ac4c-45cac753f8be",
+        "parent": null,
+        "name": "MultiUserMerge",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "21f85e58-72be-4c3b-b126-ed9d5402ae21"
+        ],
+        "isRemovable": false,
+        "filePath": "MultiUserMerge"
+      },
+      "21f85e58-72be-4c3b-b126-ed9d5402ae21": {
+        "id": "21f85e58-72be-4c3b-b126-ed9d5402ae21",
+        "parent": "d3341dbb-5e3c-4b38-ac4c-45cac753f8be",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "MultiUserMerge/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "d3341dbb-5e3c-4b38-ac4c-45cac753f8be",
+    "openFiles": [
+      "21f85e58-72be-4c3b-b126-ed9d5402ae21"
+    ],
+    "currentFileId": "21f85e58-72be-4c3b-b126-ed9d5402ae21",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "MultiUserMerge",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "eu-west-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1568006987775
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "MultiUserMerge",
+      "url": "https://github.com/Kumudikatest/MultiUserMerge"
+    }
+  }
+}

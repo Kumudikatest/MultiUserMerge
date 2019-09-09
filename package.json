@@ -1,7 +1,9 @@
 {
   "name": "MultiUserMerge",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "test": "0.6.0"
+  },
   "devDependencies": {
     "aws-sdk": "2.176.0"
   }

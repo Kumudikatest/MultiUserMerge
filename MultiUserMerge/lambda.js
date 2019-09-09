@@ -3,11 +3,11 @@ const s3 = new AWS.S3();
 
 exports.handler = function (event, context, callback) {
     s3.getObject({
-        'Bucket': "test.indunil1",
+        'Bucket': "indunil.trigger",
         'Key': "1"
     }).promise()
         .then(data => {
-            console.log("pass data");    
+            console.log("pass data");
             console.log(data);           // successful response
             /*
             data = {
@@ -23,7 +23,7 @@ exports.handler = function (event, context, callback) {
             */
         })
         .catch(err => {
-            console.log("get error");  
+            console.log("get error");
             console.log(err, err.stack); // an error occurred
         });
 

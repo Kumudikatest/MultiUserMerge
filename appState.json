@@ -24,7 +24,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "MultiUserMerge/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst s3 = new AWS.S3();\n\nexports.handler = function (event, context, callback) {\n    s3.getObject({\n        'Bucket': \"indunil.trigger\",\n        'Key': \"1\"\n    }).promise()\n        .then(data => {\n            console.log(\"pass data\");\n            console.log(data);           // successful response\n            /*\n            data = {\n                AcceptRanges: \"bytes\", \n                ContentLength: 3191, \n                ContentType: \"image/jpeg\", \n                ETag: \"\\\"6805f2cfc46c0f04559748bb039d69ae\\\"\", \n                LastModified: \"<Date Representation>\", \n                Metadata: {}, \n                TagCount: 2, \n                VersionId: \"null\"\n            }\n            */\n        })\n        .catch(err => {\n            console.log(\"get error\");\n            console.log(err, err.stack); // an error occurred\n        });\n\n    callback(null, { \"message\": \"Successfully executed s3\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst s3 = new AWS.S3();\n\nexports.handler = function (event, context, callback) {\n    s3.getObject({\n        'Bucket': \"indunil.trigger\",\n        'Key': \"1\"\n    }).promise()\n        .then(data => {\n            console.log(\"pass data\");    \n            console.log(data);           // successful response\n            /*\n            data = {\n                AcceptRanges: \"bytes\", \n                ContentLength: 3191, \n                ContentType: \"image/jpeg\", \n                ETag: \"\\\"6805f2cfc46c0f04559748bb039d69ae\\\"\", \n                LastModified: \"<Date Representation>\", \n                Metadata: {}, \n                TagCount: 2, \n                VersionId: \"null\"\n            }\n            */\n        })\n        .catch(err => {\n            console.log(\"get error\");  \n            console.log(err, err.stack); // an error occurred\n        });\n\n    callback(null, { \"message\": \"Successfully executed s3\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -52,7 +52,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "MultiUserMerge/hiruadded.js",
-        "code": "//this is a test file edit"
+        "code": "//this is a test file edit sample"
       },
       "1d5ac289-c515-4168-8f1e-cc9d387695c3": {
         "id": "1d5ac289-c515-4168-8f1e-cc9d387695c3",
@@ -69,9 +69,10 @@
     "deletedFiles": [],
     "rootNode": "d3341dbb-5e3c-4b38-ac4c-45cac753f8be",
     "openFiles": [
-      "21f85e58-72be-4c3b-b126-ed9d5402ae21"
+      "21f85e58-72be-4c3b-b126-ed9d5402ae21",
+      "0a4cc8ad-fba1-44eb-b9bf-7083b598d83e"
     ],
-    "currentFileId": "21f85e58-72be-4c3b-b126-ed9d5402ae21",
+    "currentFileId": "0a4cc8ad-fba1-44eb-b9bf-7083b598d83e",
     "resources": {
       "s3testindunil1": {
         "name": "s3testindunil1",
@@ -148,8 +149,10 @@
         },
         "test": {
           "name": "test",
+          "language": "javascript",
           "version": "0.6.0",
-          "language": "javascript"
+          "dev": false,
+          "notRemovable": false
         }
       }
     }
@@ -161,7 +164,7 @@
     "projectRegion": "eu-west-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568008474149
+    "lastSave": 1568008622345
   },
   "VCS_STATE": {
     "provider": "GitHub",

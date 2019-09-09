@@ -8,7 +8,8 @@ exports.handler = function (event, context, callback) {
     }).promise()
         .then(data => {
             console.log("pass data");
-            console.log(data);           // successful response
+            console.log(data);
+            callback(null, { "message": "Successfully executed s3" });           // successful response
             /*
             data = {
                 AcceptRanges: "bytes", 
@@ -24,8 +25,9 @@ exports.handler = function (event, context, callback) {
         })
         .catch(err => {
             console.log("get error");
-            console.log(err, err.stack); // an error occurred
+            console.log(err, err.stack);
+            callback(null, { "message": "Error in S3" }); // an error occurred
         });
 
-    callback(null, { "message": "Successfully executed s3" });
+    
 }
